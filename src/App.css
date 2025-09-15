@@ -1,0 +1,214 @@
+/* Reset */
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+/* Wrapper blur when form is open */
+.content-wrapper.blurred {
+  filter: blur(6px);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  color: orange;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* CTA Button */
+.cta-btn {
+  padding: 12px 28px;
+  background: orange;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.cta-btn:hover {
+  background: #fff;
+  color: orange;
+  transform: scale(1.05);
+}
+
+.cta-btn.slide-left {
+  transform: translateX(-150px);
+  opacity: 0.5;
+}
+
+/* Events Section */
+.events-slider {
+  padding: 60px 20px;
+  text-align: center;
+  background: #111;
+}
+
+.events-slider h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: orange;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.slide-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.slide-card:hover {
+  transform: translateY(-5px);
+}
+
+.slide-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* Dots */
+.dots {
+  margin-top: 20px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background: #555;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: orange;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #000;
+  color: #aaa;
+}
+
+/* Registration Form Popup */
+.register-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  width: 320px;
+  animation: fadeIn 0.4s ease forwards;
+  text-align: center;
+}
+
+.register-form h2 {
+  margin-bottom: 20px;
+  color: orange;
+}
+
+.register-form input {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #333;
+  color: white;
+}
+
+.register-form input::placeholder {
+  color: #bbb;
+}
+
+.register-form .toggle-btn {
+  margin-top: 15px;
+  background: none;
+  color: orange;
+  border: none;
+  cursor: pointer;
+}
+
+.register-form .close-btn {
+  margin-top: 15px;
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Profile Page */
+.profile-page h1 {
+  font-size: 2.5rem;
+  color: orange;
+}
+
+.profile-page p {
+  font-size: 1.2rem;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
